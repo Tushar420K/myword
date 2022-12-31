@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+body{
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-box{
+  display: flex;
+  margin-top: 5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.alertbox{
+  position: absolute;
   display: flex;
   flex-direction: column;
+  top:13%;
+  right: 5%;
+  height: 50px;
+  width: 30%;
+  border-radius: 5px;
+  animation: left_to_right 0.5s forwards,1s ease-in-out 1s 1 opa;
+}
+
+.alerttext{
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 90%;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.alert-content
+{
+  margin-top: 0.5rem;
+  padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.runout{
+  height: 13%;
+  border-radius: 5px;
+}
+
+.runin{
+  height: 100%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.alerthid{
+  display: none !important;
+  animation: none !important;
+}
+
+
+@keyframes left_to_right{
+  from{
+    right: -100%;
   }
-  to {
-    transform: rotate(360deg);
+  to{
+    right: 5%;
+  }
+}
+
+@keyframes opa {
+  100%{
+    visibility: hidden;
+  }
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
   }
 }
